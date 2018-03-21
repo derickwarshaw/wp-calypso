@@ -68,7 +68,7 @@ import { fetchSitesAndUser } from 'lib/signup/step-actions';
 import { loadTrackingTool } from 'state/analytics/actions';
 import { getProductsList, isProductsListFetching } from 'state/products-list/selectors';
 import QueryProducts from 'components/data/query-products-list';
-import { PLAN_PREMIUM, PLAN_BUSINESS } from '../../../lib/plans/constants';
+import { PLAN_BUSINESS, PLAN_BUSINESS_2_YEARS } from '../../../lib/plans/constants';
 import { getPlan } from '../../../lib/plans';
 
 const Checkout = createReactClass( {
@@ -505,7 +505,7 @@ const Checkout = createReactClass( {
 			return false;
 		}
 
-		const availableTerms = [ PLAN_BUSINESS, PLAN_PREMIUM ];
+		const availableTerms = [ PLAN_BUSINESS, PLAN_BUSINESS_2_YEARS ];
 
 		return (
 			<React.Fragment>
